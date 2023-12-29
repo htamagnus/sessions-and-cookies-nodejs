@@ -5,9 +5,7 @@ Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. 
 - não armazene dados sensíveis aqui, pois podem ser visualizados e manipulados.
 - os cookies podem ser configurados para expirar quando o navegador é fechado (=> "Session Cookie") ou quando uma determinada idade/data de expiração é atingida ("Permanent Cookie").
 - funcionam bem em conjunto com sessões.
-
-## Tópicos:
-1. [Configuração de Cookies em Express](#configuração-de-cookies-em-express) 🌐
+---
 
 ## 1. **Configuração de Cookies em Express 🛠️**
 - geralmente é utilizado o middleware cookie-parser;
