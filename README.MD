@@ -7,6 +7,8 @@ Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. 
 - funcionam bem em conjunto com sessões.
 
 ## 1. **Configuração de Cookies em Express 🛠️**
+- geralmente é utilizado o middleware cookie-parser;
+- este middleware analisa os cabeçalhos de cookies e os torna acessíveis no objeto req.cookies;
 ~~~javascript
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -18,6 +20,8 @@ app.use(cookieParser());
 ---
 
 ## 2. **Definindo Cookies 🍪** 
+- podemos definir cookies usando o método res.cookie();
+- este método aceita o nome do cookie, seu valor e opções adicionais, como tempo de expiração e configurações de segurança;
 ~~~javascript
 app.get('/definir-cookie', (req, res) => {
   // Define um cookie chamado 'exemplo' com o valor '123' e expira em 1 hora
@@ -28,6 +32,8 @@ app.get('/definir-cookie', (req, res) => {
 ---
 
 ## 3. **Lendo Cookies 📖**
+- os cookies definidos podem ser lidos a partir do objeto req.cookies;
+- este objeto contém pares chave-valor dos cookies associados à requisição atual;
 ~~~javascript
 app.get('/ler-cookie', (req, res) => {
   // Lê o valor do cookie 'exemplo'
@@ -38,6 +44,7 @@ app.get('/ler-cookie', (req, res) => {
 ---
 
 ## 4. **Expiração de Cookies ⌛**
+- para configurar a expiração de um cookie, é utilizado a opção maxAge para especificar a duração em milissegundos;
 ~~~javascript
 app.get('/cookie-expirado', (req, res) => {
   // Define um cookie que expirará após 1 minuto
@@ -48,6 +55,7 @@ app.get('/cookie-expirado', (req, res) => {
 ---
 
 ## 5. **Excluindo Cookies ❌**
+- para excluir um cookie, você pode definir seu valor como null e, opcionalmente, especificar opções de expiração;
 ~~~javascript
 app.get('/deletar-cookie', (req, res) => {
   // Exclui o cookie 'exemplo'
