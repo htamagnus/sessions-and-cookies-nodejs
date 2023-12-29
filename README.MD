@@ -1,15 +1,26 @@
-# What I've learned:
+## Projeto em NodeJS sobre Sessões e Cookies 🍪🚀
 
-### Cookies:
-- great for storing data on the client (browser);
-- DO NOT store sensitive data here, it can be viewed and manipulated;
-- cookies can be configurated to expire whe the browser is closed(=> "Session Cookie") or when a certain age/expiry date is reached ("Permanent Cookie")
-- works well together with sessions;
+Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. Aqui estão alguns pontos importantes sobre cookies:
+- são excelentes para armazenar dados no cliente (navegador);
+- não armazene dados sensíveis aqui, pois podem ser visualizados e manipulados.
+- os cookies podem ser configurados para expirar quando o navegador é fechado (=> "Session Cookie") ou quando uma determinada idade/data de expiração é atingida ("Permanent Cookie").
+- funcionam bem em conjunto com sessões.
 
-### Sessions:
-- stored on the server, not on the client;
-- great or storing sensitive data that should survive across requests;
-- you can store anything in sessions;
-- often used for storing user data/authentication status;
-- identified via Cookie (don't mistake this with term "Session cookie")
-- you can use different storages for saving your sessions on the server
+Exemplo de uso de Cookie em Express: 
+~~~javascript
+const express = require('express');
+const cookieParser = require('cookie-parser');
+
+const app = express();
+
+// Configurando o uso do cookie-parser
+app.use(cookieParser());
+
+app.get('/definir-cookie', (req, res) => {
+  // Define um cookie chamado 'exemplo' com o valor '123'
+  res.cookie('exemplo', '123');
+  res.send('Cookie definido com sucesso!');
+});
+
+app.get('/
+~~~
