@@ -7,7 +7,7 @@ Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. 
 - funcionam bem em conjunto com sessões.
 
 ## Tópicos:
-1. (Configuração de Cookies em Express)[#configuração-de-cookies-em-express]
+1. [Configuração de Cookies em Express](#configuração-de-cookies-em-express) 🌐
 
 ## 1. **Configuração de Cookies em Express 🛠️**
 - geralmente é utilizado o middleware cookie-parser;
