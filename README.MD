@@ -1,4 +1,4 @@
-## Projeto em NodeJS sobre Sessões e Cookies 🍪🚀
+# Projeto em NodeJS sobre Sessões e Cookies 🍪🚀
 
 Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. Aqui estão alguns pontos importantes sobre cookies:
 - são excelentes para armazenar dados no cliente (navegador);
@@ -6,7 +6,7 @@ Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. 
 - os cookies podem ser configurados para expirar quando o navegador é fechado (=> "Session Cookie") ou quando uma determinada idade/data de expiração é atingida ("Permanent Cookie").
 - funcionam bem em conjunto com sessões.
 
-1. Configuração de Cookies em Express 🛠️ 
+## 1. **Configuração de Cookies em Express 🛠️**
 ~~~javascript
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -16,7 +16,7 @@ const app = express();
 app.use(cookieParser());
 ~~~
 
-2. Definindo Cookies 🍪 
+## 2. **Definindo Cookies 🍪** 
 ~~~javascript
 app.get('/definir-cookie', (req, res) => {
   // Define um cookie chamado 'exemplo' com o valor '123' e expira em 1 hora
@@ -25,7 +25,7 @@ app.get('/definir-cookie', (req, res) => {
 });
 ~~~
 
-3. Lendo Cookies 📖
+## 3. **Lendo Cookies 📖**
 ~~~javascript
 app.get('/ler-cookie', (req, res) => {
   // Lê o valor do cookie 'exemplo'
@@ -34,7 +34,7 @@ app.get('/ler-cookie', (req, res) => {
 });
 ~~~
 
-4. Expiração de Cookies ⌛
+## 4. **Expiração de Cookies ⌛**
 ~~~javascript
 app.get('/cookie-expirado', (req, res) => {
   // Define um cookie que expirará após 1 minuto
@@ -43,7 +43,7 @@ app.get('/cookie-expirado', (req, res) => {
 });
 ~~~
 
-5. Excluindo Cookies ❌
+## 5. **Excluindo Cookies ❌**
 ~~~javascript
 app.get('/deletar-cookie', (req, res) => {
   // Exclui o cookie 'exemplo'
@@ -52,7 +52,7 @@ app.get('/deletar-cookie', (req, res) => {
 });
 ~~~
 
-6. Segurança 🔐
+## 6. **Segurança 🔐**
 - ao lidar com dados sensíveis, é essencial configurar cookies com as opções de segurança apropriadas, como o uso do atributo httpOnly para proteger contra ataques XSS;
 ~~~javascript
 app.get('/cookie-seguro', (req, res) => {
