@@ -13,7 +13,6 @@ const cookieParser = require('cookie-parser');
 
 const app = express();
 
-// Configurando o uso do cookie-parser
 app.use(cookieParser());
 
 app.get('/definir-cookie', (req, res) => {
