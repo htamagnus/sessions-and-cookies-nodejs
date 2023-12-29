@@ -15,6 +15,7 @@ const app = express();
 
 app.use(cookieParser());
 ~~~
+---
 
 ## 2. **Definindo Cookies 🍪** 
 ~~~javascript
