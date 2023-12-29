@@ -25,6 +25,7 @@ app.get('/definir-cookie', (req, res) => {
   res.send('Cookie definido com sucesso!');
 });
 ~~~
+---
 
 ## 3. **Lendo Cookies 📖**
 ~~~javascript
@@ -34,6 +35,7 @@ app.get('/ler-cookie', (req, res) => {
   res.send(`Valor do Cookie: ${valorDoCookie}`);
 });
 ~~~
+---
 
 ## 4. **Expiração de Cookies ⌛**
 ~~~javascript
@@ -43,6 +45,7 @@ app.get('/cookie-expirado', (req, res) => {
   res.send('Cookie com expiração definida');
 });
 ~~~
+---
 
 ## 5. **Excluindo Cookies ❌**
 ~~~javascript
@@ -52,6 +55,7 @@ app.get('/deletar-cookie', (req, res) => {
   res.send('Cookie excluído com sucesso!');
 });
 ~~~
+---
 
 ## 6. **Segurança 🔐**
 - ao lidar com dados sensíveis, é essencial configurar cookies com as opções de segurança apropriadas, como o uso do atributo httpOnly para proteger contra ataques XSS;
