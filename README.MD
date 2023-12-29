@@ -6,7 +6,7 @@ Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. 
 - os cookies podem ser configurados para expirar quando o navegador é fechado (=> "Session Cookie") ou quando uma determinada idade/data de expiração é atingida ("Permanent Cookie").
 - funcionam bem em conjunto com sessões.
 
-Exemplo de uso de Cookie em Express 🍪: 
+1. Configuração de Cookies em Express 🛠️ 
 ~~~javascript
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -14,11 +14,50 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 app.use(cookieParser());
+~~~
 
+2. Definindo Cookies 🍪 
+~~~javascript
 app.get('/definir-cookie', (req, res) => {
-  res.cookie('exemplo', '123');
+  // Define um cookie chamado 'exemplo' com o valor '123' e expira em 1 hora
+  res.cookie('exemplo', '123', { maxAge: 3600000 });
   res.send('Cookie definido com sucesso!');
 });
+~~~
 
-app.get('/
+3. Lendo Cookies 📖
+~~~javascript
+app.get('/ler-cookie', (req, res) => {
+  // Lê o valor do cookie 'exemplo'
+  const valorDoCookie = req.cookies.exemplo;
+  res.send(`Valor do Cookie: ${valorDoCookie}`);
+});
+~~~
+
+4. Expiração de Cookies ⌛
+~~~javascript
+app.get('/cookie-expirado', (req, res) => {
+  // Define um cookie que expirará após 1 minuto
+  res.cookie('cookieExpirado', 'Este cookie vai expirar em breve', { maxAge: 60000 });
+  res.send('Cookie com expiração definida');
+});
+~~~
+
+5. Excluindo Cookies ❌
+~~~javascript
+app.get('/deletar-cookie', (req, res) => {
+  // Exclui o cookie 'exemplo'
+  res.cookie('exemplo', null, { maxAge: 0 });
+  res.send('Cookie excluído com sucesso!');
+});
+~~~
+
+6. Segurança 🔐
+- ao lidar com dados sensíveis, é essencial configurar cookies com as opções de segurança apropriadas, como o uso do atributo httpOnly para proteger contra ataques XSS;
+~~~javascript
+app.get('/cookie-seguro', (req, res) => {
+  // Define um cookie seguro e acessível apenas via HTTP
+  res.cookie('cookieSeguro', 'Este é um cookie seguro', { httpOnly: true, secure: true });
+  res.send('Cookie seguro definido com sucesso!');
+});
 ~~~
