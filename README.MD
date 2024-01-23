@@ -1,4 +1,17 @@
-# Projeto em NodeJS sobre Sessões e Cookies 🍪🚀
+[express_BADGE]: https://img.shields.io/badge/express-005CFE?style=for-the-badge&logo=express
+
+
+<h1 align="center" style="font-weight: bold;"> Projeto em NodeJS sobre Sessões e Cookies 🍪🚀 </h1>
+
+<div align="center">
+  
+![nodejs][nodejs_BADGE]
+![express][express_BADGE]
+![mondogb][mongodb_BADGE]
+![mongoose][mongoose_BADGE]
+![nodemon][nodemon_BADGE]
+
+</div>
 
 Os cookies são pequenos pedaços de dados armazenados no navegador do cliente. Aqui estão alguns pontos importantes sobre cookies:
 - são excelentes para armazenar dados no cliente (navegador);
